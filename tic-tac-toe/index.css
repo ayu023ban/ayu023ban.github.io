@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bubblegum Sans", cursive;
+}
+.wrapper {
+  background-image: linear-gradient(40deg, rgb(69, 202, 252), rgb(48, 63, 159));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: "Bubblegum Sans", cursive;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+}
+
+.page2,
+.page3,
+.page {
+  background-color: white;
+  width: 650px;
+  height: 650px;
+  border: 0.5px solid gray;
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+  left: 50%;
+  margin-left: -325px;
+  transform-origin: center;
+  transform: rotate(2.5deg);
+}
+.page3 {
+  transform: rotate(-2.5deg);
+}
+.page {
+  transform: rotate(0);
+  z-index: 2;
+}
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 400px;
+  height: 400px;
+  margin-left: -200px;
+  left: 50%;
+  z-index: 5;
+  top: 150px;
+}
+#box1,
+#box2,
+#box0,
+#box3,
+#box4,
+#box5 {
+  border-bottom: 5px dashed black;
+}
+#box0,
+#box1,
+#box3,
+#box4,
+#box6,
+#box7 {
+  border-right: 5px dashed black;
+}
+.cross {
+  background-image: url("./cross.png");
+}
+.zero {
+  background-image: url("./zero.png");
+}
+#custom-confirm {
+  position: absolute;
+  width: 600px;
+  height: 435px;
+  left: 50%;
+  top: 115px;
+  margin-left: -300px;
+  text-align: center;
+  z-index: 3;
+}
+#heading {
+  position: relative;
+  color: #000000d1;
+  font-size: 85px;
+}
+#question {
+  position: relative;
+  color: #3b87cf;
+  font-size: 48px;
+  margin-top: 100px;
+}
+.optioncontainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin-top: 140px;
+  left:50%;
+  margin-left: -200px;
+  width:400px;
+  position: relative;
+}
+#option1 {
+  background-image: linear-gradient(40deg, #c4d5db, #00b0f2);
+  position: relative;
+  width: 100px;
+  height: 60px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding-top: 18px;
+}
+#option2 {
+  background-image: linear-gradient(40deg, #c4d5db, #00b0f2);
+  position: relative;
+  width: 100px;
+  height: 60px;
+  box-sizing: border-box;
+  padding-top: 18px;
+  cursor: pointer;
+}
+.none {
+  display: none;
+}
+#sound {
+  background-color: rgb(66, 133, 244);
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  border-width: 0;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 11px 0px,
+    rgba(0, 0, 0, 0.15) 0px 4px 15px 0px;
+  top: 565px;
+  left: 25px;
+  position: absolute;
+  z-index: 4;
+}
+.fa-volume-up, .fa-volume-mute {
+  color: white;
+  font-size: 29px;
+}
+#reset {
+  width: 64px;
+  height: 64px;
+  border-width: 0;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 11px 0px,
+    rgba(0, 0, 0, 0.15) 0px 4px 15px 0px;
+  background-color: rgb(66, 133, 244);
+  position: absolute;
+  top: 560px;
+  left: 564px;
+}
+.fa-undo {
+  color: white;
+  font-size: 25px;
+}
+#resetcurrent {
+  height: 53px;
+  width: 127px;
+  border-width: 0;
+  position: absolute;
+  top: 571px;
+  left: 258px;
+  background-image: linear-gradient(40deg, #97e1e1, #00a0ff);
+  color: white;
+  font-size: 30px;
+}
+
+.x2,
+.x1 {
+  stroke-dashoffset: 212px;
+  stroke-dasharray: 214px;
+  opacity: 0;
+  transition: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.xanimate {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+.o1 {
+  stroke-dashoffset: 389px;
+  stroke-dasharray: 389px;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+}
+.oanimate {
+  stroke-dashoffset: 0;
+}
+.x {
+  position: absolute;
+}
+.o {
+  position: absolute;
+}
+
+.player1picdiv {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  top: 245px;
+}
+.player1pic,
+.player2pic {
+  width: 300px;
+  height: auto;
+}
+
+.gameboard {
+  position: relative;
+  width: 670px;
+  height: 670px;
+  left: 50%;
+  margin-left: -335px;
+  top: 100px;
+}
+.player2picdiv {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  top: 245px;
+}
+.player2pic {
+  position: absolute;
+}
+#player1scoreboard, #player2scoreboard {
+  position: relative;
+  width: 147px;
+  margin: auto;
+  background-color: white;
+  height: 41px;
+  padding:5px 10px;
+  box-sizing: border-box;
+  font-size: 26px;
+  color: #0c5460;
+  font-weight: bolder;
+  font-family: LuckiestGuy;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.16);
+  border-bottom-color: #a8e4ef;
+  border-bottom-width: 2px;
+}
+#p1score,#p2score{
+  float: right;
+}
