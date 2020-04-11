@@ -1,3 +1,6 @@
 [submodule "tic-tac-toe"]
 	path = tic-tac-toe
 	url = https://github.com/ayu023ban/tic-tac-toe.git
+[submodule "portfolio"]
+	path = portfolio
+	url = git@github.com:ayu023ban/portfolio.git
