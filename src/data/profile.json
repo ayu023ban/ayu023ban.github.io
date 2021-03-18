@@ -1,0 +1,43 @@
+{
+  "full_name": "Ayush Bansal",
+  "first_name": "Ayush",
+  "description1": "I am a passionate software developer based in Rajasthan, India specialized in building exceptional software products, applications, services and everything in between.",
+  "description2": "As a highly-motivated and results-oriented software developer I have a proven track record of providing extraordinarily levels of software quality, service and consulting to a broad range of people from small, medium and large sizes.",
+  "description3": "I am always looking to secure and expand a responsible position in an IT organization, where I can bring immediate and strategic value and develop current skillset further and beyond the actual status quo. I love working with cutting-edge technology and playing with the latest gadgets.",
+  "position": "passionate software developer",
+  "technologies": [
+    "JavaScript",
+    "React",
+    "Django",
+    "Static Code Analysis",
+    "Software Principles",
+    "Agile",
+    "SCRUM & Kanban"
+  ],
+  "location": "India",
+  "blog": "https://medium.com/@aayushbansal_75829",
+  "email": "ayu023ban@gmail.com",
+  "social_links": {
+    "github": {
+      "link": "https://github.com/ayu023ban",
+      "title": "github",
+      "logo": "fab fa-github"
+    },
+    "email": {
+      "link": "mailto:ayu023ban@gmail.com",
+      "title": "email",
+      "logo": "fas fa-paper-plane"
+    },
+    "linkedin": {
+      "link": "https://www.linkedin.com/in/ayush-bansal-2b00b0192/",
+      "title": "linkedin",
+      "logo": "fab fa-linkedin"
+    },
+    "xing": null,
+    "instagram": {
+      "link": "https://www.instagram.com/ayu023ban/",
+      "title": "instagram",
+      "logo": "fab fa-instagram"
+    }
+  }
+}

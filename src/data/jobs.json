@@ -1,0 +1,11 @@
+[
+  {
+    "id": 0,
+    "jobTitle": "Software Development Intern",
+    "company": "Powerplay",
+    "link": "https://getpowerplay.in",
+    "from": "Aug 2020",
+    "till": "Nov 2020",
+    "description": "Build Frontend Web Applications with React and NodeJS.<br/><br/>Developed various data management pages for clients like expense management, GRN management, PO and Invoice management.<br><br/>Improved various apis and pdf generating service for PO, DPR and a lot others."
+  }
+]

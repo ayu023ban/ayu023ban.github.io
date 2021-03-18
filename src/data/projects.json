@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Restaurent",
+    "type": "Personal Development",
+    "description": "Fully Responsive, with mysql powered server progressive web app for small restaurants, with integrated simple booking system and basic administration tools for the restaurent staff",
+    "technologies": ["PHP", "MYSQL", "HTML", "CSS", "JS"],
+    "gitHub": "https://github.com/ayu023ban/restaurent/",
+    "url": null,
+    "backgroundImage": "portfolio.png"
+  },
+  {
+    "name": "Tic Tac Toe",
+    "type": "Personal Development",
+    "description": "This is a complete and an awesome Tic Tac Toe game, with a great design and all the necessary features. To create the AI for this game, Mini Max algorithm is used. It is fully loaded with animations and illustrations",
+    "technologies": ["Animation", "Illustrations", "HTML", "CSS", "JS"],
+    "gitHub": "https://github.com/ayu023ban/tic-tac-toe",
+    "url": "https://ayu023ban.github.io/tic-tac-toe/",
+    "backgroundImage": "portfolio.png"
+  }
+]
