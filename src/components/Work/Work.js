@@ -1,8 +1,9 @@
-import React from 'react';
-import classes from './Work.module.css';
-import Card from '../UI/Card/Card';
-import projects from './../../data/projects.json';
-import Button from './../UI/Button/Button';
+import React from "react";
+import classes from "./Work.module.css";
+import Card from "../UI/Card/Card";
+import projects from "./../../data/projects.json";
+import Button from "./../UI/Button/Button";
+import { max_project_to_show } from "../../data/config.json";
 
 class Work extends React.Component {
   workRef = null;
@@ -17,7 +18,7 @@ class Work extends React.Component {
     window.scroll({
       top: this.workRef.current.offsetTop,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -31,10 +32,10 @@ class Work extends React.Component {
     let cards = projects.map((p) => <Card key={p.name} project={p} />);
 
     if (!this.state.showMore) {
-      cards = cards.slice(0, 3);
+      cards = cards.slice(0, max_project_to_show);
     }
 
-    const buttonText = this.state.showMore ? 'Show Less' : 'Show More';
+    const buttonText = this.state.showMore ? "Show Less" : "Show More";
 
     return (
       <div className={classes.Work} ref={this.workRef}>
