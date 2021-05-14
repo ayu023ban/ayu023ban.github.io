@@ -8,6 +8,14 @@
     "url": "https://internet.channeli.in/file-manager/"
   },
   {
+    "name": "Covid Vaccine Tracker",
+    "type": "Personal Project",
+    "description": "A Tracker to Check the availability of vaccine through pincode and buzzer in case of availability",
+    "technologies": ["Service Script","ReactJs", "CSS", "Open Api"],
+    "gitHub": "https://github.com/ayu023ban/covid-vaccine-tracker/",
+    "url": "https://ayu023ban.github.io/covid-vaccine-tracker/"
+  },
+  {
     "name": "Counselling Portal",
     "type": "Product Development",
     "description": "Counselling Portal - an Portal to book online counselling sessions with qualified counsellors for students of IITR. Made by the vision - Growing is a continuous process and discussing your problems will enable you to make mature choices and take appropriate actions",
