@@ -1,27 +1,26 @@
-import React from 'react'
-import classes from './Toolbar.module.css'
-import NavigationItems from '../NavigationItems/NavigationItems'
-import Logo from '../../Logo/Logo'
-import Button from '../../UI/Button/Button'
-import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle'
-import resume from '../../../assets/Resume.pdf'
-const toolbar = props => {
+import React from "react";
+import classes from "./Toolbar.module.css";
+import NavigationItems from "../NavigationItems/NavigationItems";
+import Logo from "../../Logo/Logo";
+import Button from "../../UI/Button/Button";
+import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
+const toolbar = (props) => {
   const resumeHandler = () => {
-    window.open(resume, '_blank')
-  }
+    window.open(process.env.PUBLIC_URL + "/resume.pdf", "_blank");
+  };
 
-  const cssClasses = [classes.Toolbar]
+  const cssClasses = [classes.Toolbar];
 
   if (props.stacked) {
-    cssClasses.push(classes.Stacked)
+    cssClasses.push(classes.Stacked);
   }
 
   if (props.hidden) {
-    cssClasses.push(classes.Hidden)
+    cssClasses.push(classes.Hidden);
   }
 
   return (
-    <header className={cssClasses.join(' ')}>
+    <header className={cssClasses.join(" ")}>
       <div className={classes.Logo}>
         <Logo />
       </div>
@@ -31,7 +30,7 @@ const toolbar = props => {
         <Button clicked={resumeHandler}>RESUME</Button>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default toolbar
+export default toolbar;
