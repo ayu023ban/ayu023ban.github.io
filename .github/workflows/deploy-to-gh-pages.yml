@@ -1,0 +1,30 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build 🔧
+        run: |
+          yarn install
+          yarn run build
+        env:
+          REACT_APP_GITHUB_REPO: ${{ secrets.REACT_APP_GITHUB_REPO }}
+          REACT_APP_TITLE: ${{ secrets.REACT_APP_TITLE }}
+          REACT_APP_WEBSITE_URL: ${{ secrets.REACT_APP_WEBSITE_URL }}
+          REACT_APP_WEBSITE_VERSION: ${{ secrets.REACT_APP_WEBSITE_VERSION }}
+          REACT_APP_DESCRIPTION: ${{ secrets.REACT_APP_DESCRIPTION }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
