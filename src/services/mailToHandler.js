@@ -1,5 +1,4 @@
-import { email } from '../data/profile.json'
-const mailtoHandler = () => {
+const mailtoHandler = (email) => {
   const subject = 'subject=Hi Ayush'
   const body = 'body=Hi Ayush, I just saw your portfolio and ....'
 

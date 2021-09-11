@@ -1,12 +1,13 @@
-import React from 'react';
-import classes from './Contact.module.css';
-import BigText from '../UI/BigText/BigText';
-import Button from './../UI/Button/Button';
-import mailtoHandler from '../../services/mailToHandler';
+import React from "react";
+import classes from "./Contact.module.css";
+import BigText from "../UI/BigText/BigText";
+import Button from "./../UI/Button/Button";
+import mailtoHandler from "../../services/mailToHandler";
+import { DataContext } from "../../hoc/DataContext";
 
 class Contact extends React.Component {
   contactRef = null;
-
+  static contextType = DataContext;
   constructor(props) {
     super(props);
     this.contactRef = React.createRef();
@@ -16,11 +17,12 @@ class Contact extends React.Component {
     window.scroll({
       top: this.contactRef.current.offsetTop,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   render() {
+    const email = this.context.profile.email;
     return (
       <div className={classes.Contact} ref={this.contactRef}>
         <h2 className={classes.Heading}>Next Steps?</h2>
@@ -30,7 +32,7 @@ class Contact extends React.Component {
           improve and for any new opportunities.
         </p>
         <p className={classes.Description}>Drop me a message or just say hi.</p>
-        <Button clicked={() => mailtoHandler()} size={1.2}>
+        <Button clicked={() => mailtoHandler(email)} size={1.2}>
           Get In Touch
         </Button>
       </div>

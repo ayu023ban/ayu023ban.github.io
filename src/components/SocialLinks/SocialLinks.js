@@ -1,12 +1,14 @@
-import React from 'react'
-import classes from './SocialLinks.module.css'
-import { social_links } from '../../data/profile.json'
+import React, { useContext } from "react";
+import classes from "./SocialLinks.module.css";
+import { DataContext } from "../../hoc/DataContext";
 const socialLinks = () => {
+  const data = useContext(DataContext);
+  const social_links = data.profile.social_links;
   return (
     <div className={classes.SocialLinks}>
       <ul>
         {Object.keys(social_links)
-          .filter(elem => social_links[elem])
+          .filter((elem) => social_links[elem])
           .map((elem, index) => (
             <li key={index}>
               <a
@@ -20,7 +22,7 @@ const socialLinks = () => {
           ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default socialLinks
+export default socialLinks;

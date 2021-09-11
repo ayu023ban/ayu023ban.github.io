@@ -1,93 +1,95 @@
-import React from 'react'
-import classes from './Layout.module.css'
-import Aux from '../../hoc/Auxiliary'
-import Toolbar from '../../components/Navigation/Toolbar/Toolbar'
-import Introduction from '../../components/Introduction/Introduction'
-import AboutMe from '../../components/AboutMe/AboutMe'
-import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer'
-import Experience from '../../components/Experience/Experience'
-import Contact from '../../components/Contact/Contact'
-import Work from '../../components/Work/Work'
-import Footer from './../../components/Footer/Footer'
-import ScrollToTop from '../../components/Navigation/ScrollToTop/ScrollToTop'
-import SocialLinks from '../../components/SocialLinks/SocialLinks'
-import { blog } from '../../data/profile.json'
+import React from "react";
+import classes from "./Layout.module.css";
+import Aux from "../../hoc/Auxiliary";
+import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
+import Introduction from "../../components/Introduction/Introduction";
+import AboutMe from "../../components/AboutMe/AboutMe";
+import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
+import Experience from "../../components/Experience/Experience";
+import Contact from "../../components/Contact/Contact";
+import Work from "../../components/Work/Work";
+import Footer from "./../../components/Footer/Footer";
+import ScrollToTop from "../../components/Navigation/ScrollToTop/ScrollToTop";
+import SocialLinks from "../../components/SocialLinks/SocialLinks";
+import { DataContext } from "../../hoc/DataContext";
 
 class Layout extends React.Component {
+  static contextType = DataContext;
   constructor(props) {
-    super(props)
-    this.aboutMeChild = React.createRef()
-    this.experienceChild = React.createRef()
-    this.contactChild = React.createRef()
-    this.workChild = React.createRef()
+    super(props);
+    this.aboutMeChild = React.createRef();
+    this.experienceChild = React.createRef();
+    this.contactChild = React.createRef();
+    this.workChild = React.createRef();
     this.state = {
       openMenu: false,
       displayScrollToTop: false,
       toolbarStacked: false,
       toolbarHidden: false,
-    }
+    };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.scrollHandler)
+    window.addEventListener("scroll", this.scrollHandler);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.scrollHandler)
+    window.removeEventListener("scroll", this.scrollHandler);
   }
 
-  scrollToHandler = index => {
-    this.setState({ openMenu: false })
+  scrollToHandler = (index) => {
+    const blog = this.context.profile.blog;
+    this.setState({ openMenu: false });
     switch (index) {
       case 0:
-        this.aboutMeChild.current.scrollToMyRef()
-        return
+        this.aboutMeChild.current.scrollToMyRef();
+        return;
       case 1:
-        this.experienceChild.current.scrollToMyRef()
-        return
+        this.experienceChild.current.scrollToMyRef();
+        return;
       case 2:
-        this.workChild.current.scrollToMyRef()
-        return
+        this.workChild.current.scrollToMyRef();
+        return;
       case 3:
-        this.contactChild.current.scrollToMyRef()
-        return
+        this.contactChild.current.scrollToMyRef();
+        return;
       case 4:
-        window.open(blog, '_blank')
-        return
+        window.open(blog, "_blank");
+        return;
       default:
-        return
+        return;
     }
-  }
+  };
 
   openMenuHandler = () => {
-    this.setState({ openMenu: true })
-  }
+    this.setState({ openMenu: true });
+  };
 
   closeMenuHandler = () => {
-    this.setState({ openMenu: false })
-  }
+    this.setState({ openMenu: false });
+  };
 
   scrollHandler = () => {
     if (window.scrollY > 35) {
-      this.setState({ toolbarStacked: true })
+      this.setState({ toolbarStacked: true });
     } else {
-      this.setState({ toolbarStacked: false })
+      this.setState({ toolbarStacked: false });
     }
 
     if (window.scrollY >= 225) {
-      this.setState({ toolbarHidden: true, displayScrollToTop: true })
+      this.setState({ toolbarHidden: true, displayScrollToTop: true });
     } else {
-      this.setState({ toolbarHidden: false, displayScrollToTop: false })
+      this.setState({ toolbarHidden: false, displayScrollToTop: false });
     }
-  }
+  };
 
   scrollToTopHandler = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   render() {
     return (
@@ -118,8 +120,8 @@ class Layout extends React.Component {
         <SocialLinks />
         <Footer />
       </Aux>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;

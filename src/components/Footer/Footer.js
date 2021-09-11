@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import classes from './Footer.module.css'
-import { full_name } from '../../data/profile.json'
+import { DataContext } from '../../hoc/DataContext'
 const footer = () => {
+  const data  = useContext(DataContext)
+  const full_name = data.profile.full_name
   return (
     <div className={classes.Footer}>
       <a

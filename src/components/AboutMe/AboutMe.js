@@ -1,22 +1,22 @@
-import React from 'react'
-import classes from './AboutMe.module.css'
-import profile from '../../data/profile.json'
+import React from "react";
+import { DataContext } from "../../hoc/DataContext";
+import classes from "./AboutMe.module.css";
 
 class AboutMe extends React.Component {
-  aboutMeRef = null
-
+  aboutMeRef = null;
+  static contextType = DataContext;
   constructor(props) {
-    super(props)
-    this.aboutMeRef = React.createRef()
+    super(props);
+    this.aboutMeRef = React.createRef();
   }
 
   scrollToMyRef = () => {
     window.scroll({
       top: this.aboutMeRef.current.offsetTop,
       left: 0,
-      behavior: 'smooth',
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   render() {
     const {
@@ -26,13 +26,13 @@ class AboutMe extends React.Component {
       location,
       description2,
       description3,
-    } = profile
+    } = this.context.profile;
 
-    const technologiesList = technologies.map(el => (
+    const technologiesList = technologies.map((el) => (
       <li key={el} className={classes.GridListItem}>
         {el}
       </li>
-    ))
+    ));
 
     return (
       <div className={classes.AboutMe} ref={this.aboutMeRef}>
@@ -47,8 +47,8 @@ class AboutMe extends React.Component {
         </p>
         <ul className={classes.GridList}>{technologiesList}</ul>
       </div>
-    )
+    );
   }
 }
 
-export default AboutMe
+export default AboutMe;

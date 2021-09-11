@@ -1,13 +1,12 @@
 import React from "react";
 import classes from "./Work.module.css";
 import Card from "../UI/Card/Card";
-import projects from "./../../data/projects.json";
 import Button from "./../UI/Button/Button";
-import { max_project_to_show } from "../../data/config.json";
+import { DataContext } from "../../hoc/DataContext";
 
 class Work extends React.Component {
   workRef = null;
-
+  static contextType = DataContext;
   constructor(props) {
     super(props);
     this.workRef = React.createRef();
@@ -29,6 +28,8 @@ class Work extends React.Component {
   };
 
   render() {
+    const projects = this.context.projects;
+    const { max_project_to_show } = this.context.config;
     let cards = projects.map((p) => <Card key={p.name} project={p} />);
 
     if (!this.state.showMore) {

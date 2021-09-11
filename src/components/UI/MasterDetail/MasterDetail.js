@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import Detail from './Detail/Detail';
-import classes from './MasterDetail.module.css';
-import jobs from './../../../data/jobs.json';
+import React, { Component } from "react";
+import Detail from "./Detail/Detail";
+import classes from "./MasterDetail.module.css";
+import { DataContext } from "../../../hoc/DataContext";
 
 class MasterDetail extends Component {
+  static contextType = DataContext;
   constructor(props) {
     super(props);
     this.state = { selectedJob: 0 };
@@ -14,8 +15,9 @@ class MasterDetail extends Component {
   };
 
   render() {
+    const jobs = this.context.jobs;
     const companyList = jobs.map((job) => {
-      const listClass = job.id === this.state.selectedJob ? classes.Active : '';
+      const listClass = job.id === this.state.selectedJob ? classes.Active : "";
       return (
         <li
           className={listClass}
@@ -32,7 +34,9 @@ class MasterDetail extends Component {
         <div className={classes.List}>
           <ul className={classes.SelectList}>{companyList}</ul>
         </div>
-        <Detail job={jobs[this.state.selectedJob]} />
+        {companyList.length > 0 && (
+          <Detail job={jobs[this.state.selectedJob]} />
+        )}
       </div>
     );
   }
