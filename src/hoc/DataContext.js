@@ -19,16 +19,17 @@ export default ({ children }) => {
   const [config, setConfig] = useState({ max_project_to_show: 3 });
 
   useEffect(() => {
-    getRequest(`https://api.jsonbin.io/b/${profileData}`).then((res) => {
+    const root = "https://api.jsonbin.io/v3/b";
+    getRequest(`${root}/${profileData}/latest/`).then((res) => {
       setProfile(res);
     });
-    getRequest(`https://api.jsonbin.io/b/${jobsData}`).then((res) => {
+    getRequest(`${root}/${jobsData}/latest/`).then((res) => {
       setJobs(res);
     });
-    getRequest(`https://api.jsonbin.io/b/${projectsData}`).then((res) => {
+    getRequest(`${root}/${projectsData}/latest/`).then((res) => {
       setProjects(res);
     });
-    getRequest(`https://api.jsonbin.io/b/${configData}`).then((res) => {
+    getRequest(`${root}/${configData}/latest/`).then((res) => {
       setConfig(res);
     });
   }, []);
