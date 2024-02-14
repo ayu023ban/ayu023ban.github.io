@@ -1,6 +1,5 @@
 <h1 align="center"> My Portfolio 👋</h1>
 
-A Tracker to Check the availability of vaccine through pincode and buzzer in case of availability
 
 ### 🏠 [Homepage](https://github.com/ayu023ban/ayu023ban.github.io#readme)
 
@@ -41,6 +40,7 @@ yarn install
 
 
 ```
+yarn fetch_data
 yarn start
 ```
 

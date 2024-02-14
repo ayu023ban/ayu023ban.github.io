@@ -9,11 +9,18 @@ jobs:
     environment: github-pages
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v3
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.16.0'
+          cache: 'yarn'
 
       - name: Install and Build 🔧
         run: |
           yarn install
+          yarn fetch_data
           yarn run build
         env:
           REACT_APP_GITHUB_REPO: ${{ secrets.REACT_APP_GITHUB_REPO }}
