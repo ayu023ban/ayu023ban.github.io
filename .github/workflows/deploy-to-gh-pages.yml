@@ -29,6 +29,7 @@ jobs:
           REACT_APP_WEBSITE_VERSION: ${{ secrets.REACT_APP_WEBSITE_VERSION }}
           REACT_APP_DESCRIPTION: ${{ secrets.REACT_APP_DESCRIPTION }}
           REACT_APP_JSONBIN_MASTER_KEY: ${{secrets.REACT_APP_JSONBIN_MASTER_KEY}}
+          CI: ""
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0

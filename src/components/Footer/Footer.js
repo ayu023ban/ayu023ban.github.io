@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import classes from './Footer.module.css'
 import { DataContext } from '../../hoc/DataContext'
-const footer = () => {
+const Footer = () => {
   const data  = useContext(DataContext)
   const full_name = data.profile.full_name
   return (
@@ -18,4 +18,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer

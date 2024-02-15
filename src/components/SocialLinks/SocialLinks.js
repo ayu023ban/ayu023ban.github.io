@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import classes from "./SocialLinks.module.css";
 import { DataContext } from "../../hoc/DataContext";
-const socialLinks = () => {
+const SocialLinks = () => {
   const data = useContext(DataContext);
   const social_links = data.profile.social_links;
   return (
@@ -25,4 +25,4 @@ const socialLinks = () => {
   );
 };
 
-export default socialLinks;
+export default SocialLinks;
