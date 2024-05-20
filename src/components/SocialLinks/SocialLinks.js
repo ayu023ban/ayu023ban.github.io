@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import classes from "./SocialLinks.module.css";
-import { DataContext } from "../../hoc/DataContext";
+import { DataContext } from "../../hoc/DataContext.js";
 const SocialLinks = () => {
   const data = useContext(DataContext);
   const social_links = data.profile.social_links;

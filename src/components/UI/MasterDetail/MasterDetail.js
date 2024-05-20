@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Detail from "./Detail/Detail";
+import Detail from "./Detail/Detail.js";
 import classes from "./MasterDetail.module.css";
-import { DataContext } from "../../../hoc/DataContext";
+import { DataContext } from "../../../hoc/DataContext.js";
 
 class MasterDetail extends Component {
   static contextType = DataContext;

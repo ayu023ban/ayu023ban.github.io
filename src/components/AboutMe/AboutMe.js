@@ -1,5 +1,5 @@
 import React from "react";
-import { DataContext } from "../../hoc/DataContext";
+import { DataContext } from "../../hoc/DataContext.js";
 import classes from "./AboutMe.module.css";
 
 class AboutMe extends React.Component {

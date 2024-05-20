@@ -1,17 +1,17 @@
 import React from "react";
 import classes from "./Layout.module.css";
-import Aux from "../../hoc/Auxiliary";
-import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
-import Introduction from "../../components/Introduction/Introduction";
-import AboutMe from "../../components/AboutMe/AboutMe";
-import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
-import Experience from "../../components/Experience/Experience";
-import Contact from "../../components/Contact/Contact";
-import Work from "../../components/Work/Work";
-import Footer from "./../../components/Footer/Footer";
-import ScrollToTop from "../../components/Navigation/ScrollToTop/ScrollToTop";
-import SocialLinks from "../../components/SocialLinks/SocialLinks";
-import { DataContext } from "../../hoc/DataContext";
+import Aux from "../../hoc/Auxiliary.js";
+import Toolbar from "../../components/Navigation/Toolbar/Toolbar.js";
+import Introduction from "../../components/Introduction/Introduction.js";
+import AboutMe from "../../components/AboutMe/AboutMe.js";
+import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer.js";
+import Experience from "../../components/Experience/Experience.js";
+import Contact from "../../components/Contact/Contact.js";
+import Work from "../../components/Work/Work.js";
+import Footer from "./../../components/Footer/Footer.js";
+import ScrollToTop from "../../components/Navigation/ScrollToTop/ScrollToTop.js";
+import SocialLinks from "../../components/SocialLinks/SocialLinks.js";
+import { DataContext } from "../../hoc/DataContext.js";
 
 class Layout extends React.Component {
   static contextType = DataContext;

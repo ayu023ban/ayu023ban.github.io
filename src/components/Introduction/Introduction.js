@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./Introduction.module.css";
-import BigText from "../UI/BigText/BigText";
-import Button from "../UI/Button/Button";
-import mailtoHandler from "../../services/mailToHandler";
-import { DataContext } from "../../hoc/DataContext";
+import BigText from "../UI/BigText/BigText.js";
+import Button from "../UI/Button/Button.js";
+import mailtoHandler from "../../services/mailToHandler.js";
+import { DataContext } from "../../hoc/DataContext.js";
 
 class Introduction extends React.Component {
   static contextType = DataContext;

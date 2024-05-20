@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./Toolbar.module.css";
-import NavigationItems from "../NavigationItems/NavigationItems";
-import Logo from "../../Logo/Logo";
-import Button from "../../UI/Button/Button";
-import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
+import NavigationItems from "../NavigationItems/NavigationItems.js";
+import Logo from "../../Logo/Logo.js";
+import Button from "../../UI/Button/Button.js";
+import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle.js";
 const toolbar = (props) => {
   const resumeHandler = () => {
     window.open(process.env.PUBLIC_URL + "/resume.pdf", "_blank");

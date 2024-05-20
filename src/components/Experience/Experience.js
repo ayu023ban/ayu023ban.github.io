@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Experience.module.css';
-import Aux from '../../hoc/Auxiliary';
-import MasterDetail from '../UI/MasterDetail/MasterDetail';
+import Aux from '../../hoc/Auxiliary.js';
+import MasterDetail from '../UI/MasterDetail/MasterDetail.js';
 
 class Experience extends React.Component {
   experienceRef = null;

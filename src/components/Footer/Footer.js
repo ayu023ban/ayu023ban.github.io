@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import classes from './Footer.module.css'
-import { DataContext } from '../../hoc/DataContext'
+import { DataContext } from '../../hoc/DataContext.js'
 const Footer = () => {
   const data  = useContext(DataContext)
   const full_name = data.profile.full_name

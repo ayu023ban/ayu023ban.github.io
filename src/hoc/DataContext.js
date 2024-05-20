@@ -3,7 +3,7 @@ import data from '../data/data.json';
 
 export const DataContext = React.createContext();
 
-export default ({ children }) => {
+const useProvider = ({ children }) => {
   const [profile, setProfile] = useState({
     technologies: [],
     social_links: {},
@@ -26,3 +26,5 @@ export default ({ children }) => {
     ></DataContext.Provider>
   );
 };
+
+export default useProvider;

@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./Work.module.css";
-import Card from "../UI/Card/Card";
-import Button from "./../UI/Button/Button";
-import { DataContext } from "../../hoc/DataContext";
+import Card from "../UI/Card/Card.js";
+import Button from "./../UI/Button/Button.js";
+import { DataContext } from "../../hoc/DataContext.js";
 
 class Work extends React.Component {
   workRef = null;
