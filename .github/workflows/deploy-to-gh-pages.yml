@@ -3,6 +3,21 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    environment:
+      description: 'The deployment environment (e.g., staging, production)'
+      required: true
+      default: 'staging'
+      type: choice
+      options:
+      - staging
+      - production
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: false
+        default: 'warning'
+        type: string
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
