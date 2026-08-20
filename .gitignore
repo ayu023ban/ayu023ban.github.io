@@ -109,4 +109,4 @@ dist
 .env
 
 .vscode
-src/data/data.json
+src/data/data.json.DS_Store
