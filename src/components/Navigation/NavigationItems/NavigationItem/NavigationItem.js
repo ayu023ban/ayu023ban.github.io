@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './NavigationItem.module.css';
 
-const navigationItem = (props) => {
+const NavigationItem = (props) => {
   const stacked = props.stacked;
 
   return (
@@ -21,4 +21,4 @@ const navigationItem = (props) => {
   );
 };
 
-export default navigationItem;
+export default NavigationItem;

@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './NavigationItems.module.css';
 import NavigationItem from './NavigationItem/NavigationItem.js';
 
-const navigationItems = (props) => {
+const NavigationItems = (props) => {
   const externalLink = ['fas fa-external-link-alt', classes.TextColor].join(
     ' '
   );
@@ -28,4 +28,4 @@ const navigationItems = (props) => {
   );
 };
 
-export default navigationItems;
+export default NavigationItems;

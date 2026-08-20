@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Card.module.css';
 
-const card = (props) => {
+const Card = (props) => {
   const technologies = props.project.technologies.map((el) => (
     <li key={el}>{el}</li>
   ));
@@ -15,9 +15,7 @@ const card = (props) => {
     >
       <em className='fab fa-github'></em>
     </a>
-  ) : (
-    ''
-  );
+  ) : null;
 
   const urlToPage = props.project.url ? (
     <a
@@ -28,9 +26,7 @@ const card = (props) => {
     >
       <em className='fas fa-external-link-alt'></em>
     </a>
-  ) : (
-    ''
-  );
+  ) : null;
 
   return (
     <div className={classes.Card}>
@@ -48,4 +44,4 @@ const card = (props) => {
   );
 };
 
-export default card;
+export default Card;

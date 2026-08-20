@@ -9,14 +9,14 @@ const SocialLinks = () => {
       <ul>
         {Object.keys(social_links)
           .filter((elem) => social_links[elem])
-          .map((elem, index) => (
-            <li key={index}>
+          .map((elem) => (
+            <li key={elem}>
               <a
-                href={social_links[elem].link}
+                href={social_links[elem]?.link || '#'}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <em className={social_links[elem].logo}></em>
+                <em className={social_links[elem]?.logo}></em>
               </a>
             </li>
           ))}

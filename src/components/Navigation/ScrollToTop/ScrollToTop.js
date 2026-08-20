@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './ScrollToTop.module.css';
 
-const scrollToTop = (props) => {
+const ScrollToTop = (props) => {
   const display = props.display;
   let cssClasses = [classes.ScrollToTop];
 
@@ -16,4 +16,4 @@ const scrollToTop = (props) => {
   );
 };
 
-export default scrollToTop;
+export default ScrollToTop;

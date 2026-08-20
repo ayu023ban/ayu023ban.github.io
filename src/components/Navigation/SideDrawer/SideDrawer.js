@@ -5,7 +5,7 @@ import classes from './SideDrawer.module.css';
 import Button from '../../UI/Button/Button.js';
 import BackDrop from '../../UI/BackDrop/BackDrop.js';
 
-const sideDrawer = (props) => {
+const SideDrawer = (props) => {
   let attachedClasses = [classes.SideDrawer, classes.Close];
   const resumeHandler = () => {
     window.open(process.env.PUBLIC_URL + "/resume.pdf", "_blank");
@@ -28,4 +28,4 @@ const sideDrawer = (props) => {
   );
 };
 
-export default sideDrawer;
+export default SideDrawer;

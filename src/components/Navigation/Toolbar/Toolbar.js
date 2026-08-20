@@ -4,7 +4,7 @@ import NavigationItems from "../NavigationItems/NavigationItems.js";
 import Logo from "../../Logo/Logo.js";
 import Button from "../../UI/Button/Button.js";
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle.js";
-const toolbar = (props) => {
+const Toolbar = (props) => {
   const resumeHandler = () => {
     window.open(process.env.PUBLIC_URL + "/resume.pdf", "_blank");
   };
@@ -33,4 +33,4 @@ const toolbar = (props) => {
   );
 };
 
-export default toolbar;
+export default Toolbar;
